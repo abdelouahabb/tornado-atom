@@ -1,0 +1,17 @@
+{
+  "name": "tornado-templates",
+  "version": "0.1.0",
+  "description": "Atom support for Tornado templates.",
+  "license": "MIT",
+  "main": "tornado-templates.coffee",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdelouahabb/atom-tornado-templates"
+  },
+  "bugs": {
+    "url": "https://github.com/abdelouahabb/atom-tornado-templates/issues"
+  }
+}

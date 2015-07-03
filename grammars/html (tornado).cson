@@ -1,0 +1,48 @@
+'fileTypes': [
+  'html'
+]
+'name': 'HTML (Tornado)'
+'patterns': [
+  {
+    'comment': 'Since html is valid in Tornado templates include the html patterns'
+    'include': 'text.html.basic'
+  }
+  {
+    'begin': '{% comment %}'
+    'end': '{% endcomment %}'
+    'name': 'comment.block.tornado.template'
+  }
+  {
+    'begin': '{#'
+    'end': '#}'
+    'name': 'comment.line.tornado.template'
+  }
+  {
+    'begin': '{{'
+    'end': '}}'
+    'name': 'variable.other.tornado.template'
+  }
+  {
+    'begin': '({%)'
+    'captures':
+      '1':
+        'name': 'entity.other.tornado.tagbraces'
+    'end': '(%})'
+    'name': 'meta.scope.tornado.template.tag'
+    'patterns': [
+      {
+        'match': '\\b(autoescape|block|end|extends|for|if|include|else|elif|with|end)\\b'
+        'name': 'keyword.control.tornado.template'
+      }
+      {
+        'match': '\\b(and|or|not|in|by|as)\\b'
+        'name': 'keyword.operator.tornado.template'
+      }
+      {
+        'match': '[a-zA-Z_]+'
+        'name': 'string.unquoted.tornado.template.tag'
+      }
+    ]
+  }
+]
+'scopeName': 'text.html.tornado'
